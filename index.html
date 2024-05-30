@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce Amoor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Logo da Loja de Doces" class="logo">
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#products">Produtos</a></li>
+            <li><a href="#contact">Contato</a></li>
+            <li><a href="#cart">Carrinho (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="home">
+        <h2>Guardando espaço</h2>
+        <p>Gurandando espaço.</p>
+    </section>
+
+    <section id="home">
+        <h2>Bem-vindo à Loja Doce Amoor!</h2>
+        <p>Descubra os melhores doces artesanais na nossa loja.</p>
+    </section>
+
+    <section id="banner">
+        <img src="banner.jpg" alt="Banner da Loja" class="banner-img">
+    </section>
+
+    <section id="products">
+        <h2>Nossos Produtos</h2>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Buscar produtos...">
+        </div>
+        <div class="categories">
+            <button onclick="filterCategory('todos')">Todos</button>
+            <button onclick="filterCategory('doces')">Doces</button>
+            <button onclick="filterCategory('chocolates')">Chocolates</button>
+            <button onclick="filterCategory('pao de mel')">Pão de Mel</button>
+        </div>
+        <div class="product-list">
+            <div class="product" data-category="doces" data-name="Doces Sortidos" data-price="20">
+                <img src="doces1.jpg" alt="Doces Sortidos">
+                <h3>Doces Sortidos</h3>
+                <p>Uma seleção dos nossos melhores doces.</p>
+                <p>Preço: R$ 20,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-category="chocolates" data-name="Chocolates Artesanais" data-price="30">
+                <img src="doces2.jpg" alt="Chocolates Artesanais">
+                <h3>Chocolates Artesanais</h3>
+                <p>Chocolates feitos à mão com ingredientes de alta qualidade.</p>
+                <p>Preço: R$ 30,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-category="pao de mel" data-name="Pão de Mel" data-price="15">
+                <img src="doces3.jpg" alt="Pão de Mel">
+                <h3>Pão de Mel</h3>
+                <p>Diversos sabores.</p>
+                <p>Preço: R$ 15,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-category="pao de mel" data-name="Pão de Mel Beijinho/Doce de Leite 90 Gr" data-price="8">
+                <img src="doces4.jpg" alt="Pão de Mel Beijinho/Doce de Leite">
+                <h3>Pão de Mel Beijinho/Doce de Leite 90 Gr</h3>
+                <p>Preço: R$ 8,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-category="doces" data-name="Caixa com 4 Docinhos Diversos 20 Gr" data-price="10">
+                <img src="doces5.jpg" alt="Caixa com 4 Docinhos Diversos">
+                <h3>Caixa com 4 Docinhos Diversos 20 Gr</h3>
+                <p>Preço: R$ 10,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-category="doces" data-name="Doce Individual 20 Gr" data-price="3">
+                <img src="doces6.jpg" alt="Doce Individual">
+                <h3>Doce Individual 20 Gr</h3>
+                <p>Preço: R$ 3,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-category="doces" data-name="Cento de Doces 15 Gr" data-price="140">
+                <img src="doces7.jpg" alt="Cento de Doces">
+                <h3>Cento de Doces 15 Gr</h3>
+                <p>Preço: R$ 140,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Seu Carrinho</h2>
+        <div id="cart-items"></div>
+        <p>Total: R$ <span id="cart-total">0</span>,00</p>
+        <button id="checkout-button" onclick="finalizePurchase()">Finalizar Compra</button>
+    </section>
+
+    <div class="comment">
+        <div class="stars" style="color: yellow;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Melhor loja de doces que já visitei! Ótima qualidade e atendimento excelente!"</p>
+        <p>- Natalia</p>
+    </div>
+    <div class="comment">
+        <div class="stars" style="color: yellow;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Doces deliciosos e preço justo. Recomendo a todos!"</p>
+        <p>- Pedro</p>
+    </div>
+    
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <div class="contact-box">
+            <form id="contactForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<section id="about">
+    <h2>Sobre Nós</h2>
+    <p>Somos apaixonados por doces e nos dedicamos a trazer os melhores sabores para nossos clientes.</p>
+    <p>"Que transborde Amoor em forma de docinho." ♥</p>
+    <hr>
+</section>
+
+<footer>
+    <div class="social-links">
+        <a href="https://www.instagram.com/docea_amoor?igsh=dTJnc3cxNjl4cXI4" target="_blank">
+            <img src="insta.png" alt="Instagram">
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5511976835325" target="_blank">
+            <img src="whats.png" alt="WhatsApp">
+        </a>
+    </div>   
+    &copy; 2024 Doce Amoor
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

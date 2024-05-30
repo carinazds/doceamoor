@@ -1,0 +1,218 @@
+/* Estilos básicos para o site da loja de doces avançada */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EECABE;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #563B34;
+    color: #EECABE;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #EECABE;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 100px 20px 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.product {
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #563B34;
+    color: #EECABE;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3E2A27;
+}
+
+footer {
+    background-color: #563B34;
+    color: #EECABE;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#cart {
+    display: none;
+}
+
+#cart-items {
+    margin: 20px 0;
+}
+
+#contact {
+    text-align: auto;
+}
+
+.contact-box {
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid #563B34;
+    border-radius: 10px;
+    background-color: #fff;
+    max-width: 500px;
+    margin: auto;
+}
+
+#contactForm input, #contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#contactForm button {
+    width: 100%;
+}
+
+#comments-modal .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.categories {
+    margin-bottom: 20px;
+}
+
+
+.categories button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #563B34;
+    color: #EECABE;
+    cursor: pointer;
+}
+
+.categories button:hover {
+    background-color: #3E2A27;
+}
+
+
+.stars {
+    color: gold;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #563B34;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.social-links a:hover {
+    background-color: #EECABE;
+}
+
+#about {
+    background-color: #FFF5E4;
+    padding: 2em; 
+    border: 1px solid #563B34;
+    text-align: center;
+    line-height: 1.0; 
+}
+
+
+footer .social-links img {
+    width: 24px; 
+    height: 24px; 
+    
+}
